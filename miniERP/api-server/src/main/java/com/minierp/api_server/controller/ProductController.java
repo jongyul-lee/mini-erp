@@ -28,7 +28,7 @@ public class ProductController {
 
     @GetMapping("/api/v1/products")
     public ResponseEntity<List<ProductDto>> getAll(){
-        var result = productService.getAll();
+        var result = productService.findAll();
 
         return  ResponseEntity.ok(result);
     }

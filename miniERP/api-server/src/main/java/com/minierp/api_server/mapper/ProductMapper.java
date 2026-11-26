@@ -9,7 +9,7 @@ import java.util.Optional;
 @Mapper
 public interface ProductMapper {
 
-    void add(ProductDto dto);
+    void insert(ProductDto dto);
     Optional<ProductDto> findByName(String name);
-    List<ProductDto> getAll();
+    List<ProductDto> findAll();
 }

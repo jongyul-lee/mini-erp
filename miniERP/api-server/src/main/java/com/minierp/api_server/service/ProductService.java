@@ -29,12 +29,12 @@ public class ProductService {
             throw new IllegalArgumentException("이미 존재하는 상품입니다.");
         }
 
-        productMapper.add(dto);
+        productMapper.insert(dto);
     }
 
 
-    public List<ProductDto> getAll() {
+    public List<ProductDto> findAll() {
 
-        return productMapper.getAll();
+        return productMapper.findAll();
     }
 }

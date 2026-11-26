@@ -4,7 +4,7 @@
 
 <mapper namespace="com.minierp.api_server.mapper.ProductMapper">
 
-    <insert id="add">
+    <insert id="insert">
         insert into products (
             product_name,
             price,
@@ -29,7 +29,7 @@
             product_name = #{name};
     </select>
 
-    <select id ="getAll" resultType="com.minierp.api_server.dto.ProductDto">
+    <select id ="findAll" resultType="com.minierp.api_server.dto.ProductDto">
         select
             product_id as id,
             product_name as name,
