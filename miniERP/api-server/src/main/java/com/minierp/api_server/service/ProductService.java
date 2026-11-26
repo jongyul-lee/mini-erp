@@ -1,13 +1,11 @@
 package com.minierp.api_server.service;
 
-import com.minierp.api_server.dto.ProductDto;
+import com.minierp.api_server.dto.product.ProductDto;
 import com.minierp.api_server.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.management.InstanceAlreadyExistsException;
 import java.util.List;
 import java.util.Optional;
 

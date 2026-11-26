@@ -1,6 +1,6 @@
 package com.minierp.api_server.controller;
 
-import com.minierp.api_server.dto.ProductDto;
+import com.minierp.api_server.dto.product.ProductDto;
 import com.minierp.api_server.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +21,8 @@ public class ProductController {
 
     // 등록
     @PostMapping("/api/v1/product")
-    public ResponseEntity<Void> add(@RequestBody ProductDto dto){
-        productService.add(dto);
+    public ResponseEntity<Void> add(@RequestBody ProductDto request){
+        productService.add(request);
 
         return ResponseEntity.status(201).build();
     }

@@ -1,6 +1,6 @@
 package com.minierp.api_server.mapper;
 
-import com.minierp.api_server.dto.ProductDto;
+import com.minierp.api_server.dto.product.ProductDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

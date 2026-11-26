@@ -1,0 +1,32 @@
+create table users (
+	user_id bigint generated always as identity primary key,
+	user_name varchar(255) not null,
+	password_hash varchar(255) not null
+);
+
+create table orders (
+	order_id bigint generated always as identity primary key,
+	user_id bigint references users(user_id) not null,
+	 order_status VARCHAR(255) NOT NULL
+        CHECK (order_status IN ('PENDING', 'COMPLETED', 'CANCELLED')),
+	ordered_at timestamptz default now()
+);
+
+create table products (
+	product_id bigint generated always as identity primary key,
+	product_name varchar(255) not null,
+	price integer not null,
+	stock_quantity integer not null
+);
+
+create table order_product (
+	order_product_id bigint generated always as identity primary key,
+	order_id bigint references orders(order_id),
+	product_id bigint references products(product_id),
+	quantity integer not null
+);
+
+select * from users;
+select * from orders;
+select * from order_product;
+select * from products;

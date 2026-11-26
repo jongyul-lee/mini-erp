@@ -17,7 +17,7 @@
 
     </insert>
 
-    <select id="findByName" resultType="com.minierp.api_server.dto.ProductDto">
+    <select id="findByName" resultType="com.minierp.api_server.dto.product.ProductDto">
         select
             product_id as id,
             product_name as name,
@@ -29,7 +29,7 @@
             product_name = #{name};
     </select>
 
-    <select id ="findAll" resultType="com.minierp.api_server.dto.ProductDto">
+    <select id ="findAll" resultType="com.minierp.api_server.dto.product.ProductDto">
         select
             product_id as id,
             product_name as name,
