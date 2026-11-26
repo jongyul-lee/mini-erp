@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.management.InstanceAlreadyExistsException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional(readOnly = true)
@@ -36,5 +37,9 @@ public class ProductService {
     public List<ProductDto> findAll() {
 
         return productMapper.findAll();
+    }
+
+    public Optional<ProductDto> findByName(String name) {
+        return productMapper.findByName(name);
     }
 }
