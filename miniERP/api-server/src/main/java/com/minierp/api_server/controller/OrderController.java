@@ -24,6 +24,4 @@ public class OrderController {
 
         return ResponseEntity.status(201).build();
     }
-
-
 }
